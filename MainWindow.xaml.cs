@@ -1,4 +1,7 @@
-﻿using System.Windows;
+﻿using System.Reflection.Metadata;
+using System.Windows;
+using System.Windows.Controls;
+using Wpf_day_2.views;
 
 namespace MyWpfApp
 {
@@ -7,11 +10,22 @@ namespace MyWpfApp
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new HomePage());
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Home_Click(object sender, RoutedEventArgs e)
         {
-            ResultText.Text = "Ви ввели: " + InputBox.Text;
+            MainFrame.Navigate(new HomePage());
+        }
+
+        private void List_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new ListPage());
+        }
+
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new SettingsPage());
         }
     }
 }

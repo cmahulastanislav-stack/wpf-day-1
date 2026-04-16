@@ -8,30 +8,24 @@
         MinHeight="300">
 
     <Grid>
-
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Horizontal" Background="LightGray" Grid.Row="0">
-            <Button Content="Головна" Width="100" Margin="5"/>
-            <Button Content="Сторінка 1" Width="100" Margin="5"/>
-            <Button Content="Сторінка 2" Width="100" Margin="5"/>
-        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    Background="LightGray"
+                    Grid.Row="0"
+                    Margin="5">
 
-        <StackPanel Grid.Row="1" Margin="10">
-
-            <TextBlock Text="Введіть дані:" FontSize="18" Margin="0,0,0,10"/>
-
-            <TextBox Name="InputBox" Width="200" Margin="0,0,0,10"/>
-
-            <Button Content="Натисни мене" Width="150" Click="Button_Click"/>
-
-            <TextBlock Name="ResultText" FontSize="16" Margin="0,10,0,0"/>
+            <Button Content="Головна" Width="100" Margin="5" Click="Home_Click"/>
+            <Button Content="Сторінка 1" Width="100" Margin="5" Click="List_Click"/>
+            <Button Content="Сторінка 2" Width="100" Margin="5" Click="Settings_Click"/>
 
         </StackPanel>
+
+        <Frame x:Name="MainFrame" Grid.Row="1" Margin="10"/>
 
         <StatusBar Grid.Row="2">
             <StatusBarItem Content="Готово"/>
