@@ -1,6 +1,4 @@
-﻿using System.Reflection.Metadata;
-using System.Windows;
-using System.Windows.Controls;
+﻿using System.Windows;
 using Wpf_day_2.views;
 
 namespace MyWpfApp
